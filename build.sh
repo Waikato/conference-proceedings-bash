@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # Script for building LaTeX articles.
+# Supplementary documents must have the format "$NAME-supp.tex".
 
 # the usage of this script
 function usage()
@@ -9,10 +10,11 @@ function usage()
    echo "${0##*/} [-r <name>] [-h]"
    echo
    echo "Builds articles as defined in $LIST."
+   echo "Supplementary documents must have the format: <NAME>-supp.tex"
    echo
    echo " -h   this help"
    echo " -r   <name>"
-   echo "      resume update with this article"
+   echo "      resume build with this article"
    echo
 }
 
