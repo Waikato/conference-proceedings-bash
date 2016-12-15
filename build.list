@@ -1,0 +1,11 @@
+# List of directories with conference articles.
+# Comment lines start with '#'.
+# Comment lines and empty lines get ignored.
+#
+# Format:
+# name <TAB> dir <TAB> compiler
+#
+# Example:
+# preface <TAB> 00_preface <TAB> xelatex
+# someone13 <TAB> 01_someone13 <TAB> pdflatex
+# else27 <TAB> 02_else27 <TAB> pdflatex
