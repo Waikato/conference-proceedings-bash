@@ -3,9 +3,9 @@
 # Comment lines and empty lines get ignored.
 #
 # Format:
-# name <TAB> dir <TAB> compiler
+# name <TAB> dir <TAB> compiler <TAB> include in page count (yes|no)
 #
 # Example:
-# preface <TAB> 00_preface <TAB> xelatex
-# someone13 <TAB> 01_someone13 <TAB> pdflatex
-# else27 <TAB> 02_else27 <TAB> pdflatex
+# preface <TAB> 00_preface <TAB> xelatex <TAB> no
+# someone13 <TAB> 01_someone13 <TAB> pdflatex <TAB> yes
+# else27 <TAB> 02_else27 <TAB> pdflatex <TAB> yes
