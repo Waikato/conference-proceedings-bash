@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Script for building LaTeX papers.
+# Script for building LaTeX articles.
 
 # the usage of this script
 function usage()
@@ -8,11 +8,11 @@ function usage()
    echo
    echo "${0##*/} [-r <name>] [-h]"
    echo
-   echo "Builds papers as defined in $LIST."
+   echo "Builds articles as defined in $LIST."
    echo
    echo " -h   this help"
    echo " -r   <name>"
-   echo "      resume update with this project name"
+   echo "      resume update with this article"
    echo
 }
 
