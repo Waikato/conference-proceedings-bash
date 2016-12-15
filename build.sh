@@ -64,7 +64,7 @@ function build()
 }
 
 ROOT=`expr "$0" : '\(.*\)/'`
-LIST=$ROOT/build.list
+LIST=$ROOT/articles.list
 COMMENT="#"
 RESUME=""
 
