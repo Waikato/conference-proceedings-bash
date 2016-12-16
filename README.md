@@ -1,6 +1,9 @@
 # conference-proceedings-bash
 Bash scripts for managing conference proceedings written in LaTeX.
 
+Original scripts used for [ACML 2016 proceedings](http://jmlr.org/proceedings/papers/v63/) 
+(published in JMLR).
+
 ## Files
 
 * `articles.list`
