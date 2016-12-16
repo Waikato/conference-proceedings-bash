@@ -2,7 +2,7 @@
 #
 # Script for listing the page numbers of the already compiled articles.
 # Output format:
-# name <COMMA> #pages <COMMA> startpage
+# name <TAB> dir <TAB> #pages <TAB> startpage
 # If an article is not to be included in the startpage count, "NA" will
 # get output instead of the "startpage" value.
 
@@ -14,7 +14,7 @@ function usage()
    echo
    echo "Lists the page numbers of the compiled articles as defined in $LIST."
    echo "Output format:"
-   echo "name <COMMA> #pages <COMMA> startpage"
+   echo "name <TAB> dir <TAB> #pages <TAB> startpage"
    echo "If an article is not to be included in the startpage count, \"NA\" will"
    echo "get output instead of the \"startpage\" value."
    echo
@@ -36,9 +36,9 @@ function list_page_no()
   # output article stats
   if [ "$ADD" = "yes" ]
   then
-    echo "$NAME,$COUNT,$START_PAGE"
+    echo -e "$NAME\t$DIR\t$COUNT\t$START_PAGE"
   else
-    echo "$NAME,$COUNT,NA"
+    echo -e "$NAME\t$DIR\t$COUNT\tNA"
   fi
 
   if [ "$ADD" = "yes" ]
@@ -72,7 +72,7 @@ done
 
 if [ "$RESUME" = "" ]
 then
-  echo "name,pageno,startpage"
+  echo -e "name\tdir\tpageno\tstartpage"
 fi
 
 while read LINE
@@ -83,7 +83,7 @@ do
     continue
   fi
   
-  read -a PARTS <<< "${LINE}"
+  IFS=$'\t' read -r -a PARTS <<< "${LINE}"
   
   NAME="${PARTS[0]}"
   DIR="${PARTS[1]}"
