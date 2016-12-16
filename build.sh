@@ -93,7 +93,7 @@ do
     continue
   fi
   
-  read -a PARTS <<< "${LINE}"
+  IFS=$'\t' read -r -a PARTS <<< "${LINE}"
   
   NAME="${PARTS[0]}"
   DIR="${PARTS[1]}"
