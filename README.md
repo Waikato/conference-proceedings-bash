@@ -15,7 +15,6 @@ Original scripts used for [ACML 2016 proceedings](http://jmlr.org/proceedings/pa
   name <TAB> dir <TAB> compiler <TAB> include in page count (yes|no)
   ```
 
-
 * `build.sh`
 
    Builds all papers defined in `articles.list` (same directory as `build.sh`).
@@ -40,7 +39,52 @@ Original scripts used for [ACML 2016 proceedings](http://jmlr.org/proceedings/pa
   \newcommand{\startpage}{123}
   ```
 
-## Example
+* `copy_to.sh`
+
+  Copies the compiled articles (ie PDFs) to a user-specified output directory.
+  This includes optional, supplementary documents.
+
+
+## Example articles definition
+
+```
+# format:
+# name <TAB> dir <TAB> compiler <TAB> include in page count (yes|no)
+
+preface	00_preface	xelatex	no
+chen115	01_01_01_Paper 115/chen115	xelatex	yes
+Fu62	01_01_02_Paper 62/Fu62	xelatex	yes
+yang54	01_01_04_Paper 54/yang54	xelatex	yes
+nguyen19	01_02_01_Paper 19/nguyen19	pdflatex	yes
+sahoo56	01_02_02_Paper 56/sahoo56	xelatex	yes
+lei63	01_02_03_Paper 63/lei63	xelatex	yes
+qiao37	01_02_05_Paper 37/qiao37	xelatex	yes
+Brault39	01_03_01_Paper 39/Brault39	xelatex	yes
+takada48	01_03_02_Paper 48/takada48	xelatex	yes
+clemencon64	01_03_03_Paper 64/clemencon64	xelatex	yes
+Gao09	01_03_04_Paper 9/Gao09	xelatex	yes
+walder88	01_04_01_Paper 88/walder88	pdflatex	yes
+Fu60	01_04_02_Paper 60/Fu60	xelatex	yes
+Dasgupta79	01_04_04_Paper 79/Dasgupta79	xelatex	yes
+chen33	02_05_01_Paper 33/chen33	xelatex	yes
+lim83	02_05_02_Paper 83/lim83	xelatex	yes
+nguyen93	02_05_03_Paper 93/nguyen93	pdflatex	yes
+bai103	02_05_04_Paper 103/bai103	xelatex	yes
+ye4	02_06_03_Paper 4/ye4	xelatex	yes
+yamane65	02_06_04_Paper 65/yamane65	xelatex	yes
+Gouk8	02_06_05_Paper 8/Gouk8	pdflatex	yes
+kumaraswamy29	02_07_01_Paper 29/kumaraswamy29	xelatex	yes
+gao30	02_07_02_Paper 30/gao30	xelatex	yes
+ko101	02_07_03_Paper 101/ko101	pdflatex	yes
+Marron87	02_07_04_Paper 87/Marron87	xelatex	yes
+Song106	02_08_01_Paper 106/Song106	xelatex	yes
+ShafieiBavani24	02_08_02_Paper 24/ShafieiBavani24	xelatex	yes
+Horev84	02_08_03_Paper 84/Horev84	xelatex	yes
+Song94	02_08_04_Paper 94/Song94	xelatex	yes
+
+```
+
+## Example commands
 
 Here is an example sequence of commands:
 
@@ -49,4 +93,5 @@ build.sh
 list_page_no.sh > pages.txt
 update_start_page.sh -p pages.txt
 build.sh
+copy_to.sh -o /somewhere/final-proceedings
 ```
