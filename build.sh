@@ -43,7 +43,7 @@ function build()
   do
     $COMPILER $NAME.tex
     RC=0
-    RERUN=`cat $NAME.log | grep "Rerun to get citations correct\|Rerun to get cross-references right" | wc -l`
+    RERUN=`cat $NAME.log | grep "Rerun to get citations correct\|Rerun to get cross-references right\|Rerun to get outlines right" | wc -l`
     ERROR=`cat $NAME.log | grep "Emergency stop" | wc -l`
     if [ $ERROR -gt 0 ]
     then
